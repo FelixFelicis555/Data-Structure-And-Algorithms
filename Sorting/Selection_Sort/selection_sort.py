@@ -11,8 +11,6 @@ def selectionSort(n,list):
 	print("Sorted array : ",end=' ')
 	print(list)
 
-
-
 def main():
 	list=[]
 	print("Enter the numbers of the list (Enter 000 to stop) : ")
