@@ -10,13 +10,6 @@ def bubbleSort(list,n):
 	print("Sorted Array : ",end=' ')
 	print(list)
 
-
-
-
-
-
-
-
 def main():
 	list=[]
 	print("Enter the numbers in the list(Enter x to stop): ")
