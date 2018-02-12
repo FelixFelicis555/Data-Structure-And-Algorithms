@@ -30,6 +30,7 @@ void selectionSort(int list[],int n)
         list[i]=list[min_index];
         list[min_index]=temp;
     }
+    
     printf("Sorted Array : ");
     for(int i=0;i<n;i++)
     {
