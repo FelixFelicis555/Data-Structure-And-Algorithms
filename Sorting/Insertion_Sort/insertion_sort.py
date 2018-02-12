@@ -8,6 +8,7 @@ def insertionSort(list,n):
 		list[j+1]=key
 	print("Sorted List : ",list)
 
+	
 def main():
 	list=[]
 	print("Enter the numbers in the list(enter x to stop) : ")
@@ -17,6 +18,7 @@ def main():
 			break
 		list.append(int(n))
 	insertionSort(list,len(list))
+
 	
 if __name__ == '__main__':
 	main()
