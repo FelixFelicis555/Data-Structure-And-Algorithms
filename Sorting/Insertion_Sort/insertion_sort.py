@@ -7,12 +7,6 @@ def insertionSort(list,n):
 			j=j-1
 		list[j+1]=key
 	print("Sorted List : ",list)
-	
-
-
-
-
-
 
 def main():
 	list=[]
@@ -23,9 +17,6 @@ def main():
 			break
 		list.append(int(n))
 	insertionSort(list,len(list))
-
-
-
-
+	
 if __name__ == '__main__':
 	main()
