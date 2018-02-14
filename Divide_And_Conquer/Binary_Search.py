@@ -7,8 +7,8 @@ def binarySearch(arr,l,h,n):
 			return binarySearch(arr,l,mid,n)
 		else:
 			return binarySearch(arr,mid+1,h,n)
-	
-	return -1
+	else:
+		return -1
 
 
 def main():
