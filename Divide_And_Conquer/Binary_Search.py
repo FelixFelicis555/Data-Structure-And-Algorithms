@@ -10,7 +10,6 @@ def binarySearch(arr,l,h,n):
 	else:
 		return -1
 
-
 def main():
 	arr=[]
 	print("Enter the sorted array(x to stop) : ")
