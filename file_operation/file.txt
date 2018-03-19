@@ -1,0 +1,5 @@
+File operation has 3 operation 
+ 1. Read - reading the file.
+ 2. Write - write the file.If file exists the delete the existing content and then write.
+ 3.Append - Append the text to the existing file without deleting any content.
+If the file is not created then the file is automatically get created. This was all about different file operation.
