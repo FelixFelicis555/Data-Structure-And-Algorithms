@@ -5,8 +5,14 @@ class Node:
 		self.data = d
 		self.adj_list=[]
 
-	def add_adj_list(self,a):
-		self.adj_list.append(a)
+
+class Adjacent_list:
+	def __init__(self,n):
+		self.lis=[[] for _ in range(n)]
+
+	def add_edges(self,v1,v2):
+		self.lis[v1].append(v2)
+		self.lis[v2].append(v1)
 
 
 class Disjoint_sets:
@@ -19,14 +25,11 @@ class Disjoint_sets:
 		else:
 			return None
 
-	def make_set(self,v,a):
+	def make_set(self,v):
 		if v not in self.members:
 			N=Node(0,v)
 			self.members[v]=N
-			N.add_adj_list(a)
-			print(N.adj_list)
-		else:
-			N.add_adj_list(a)
+
 
 
 
@@ -47,10 +50,10 @@ class Disjoint_sets:
 			self.members[root_n1.data].rank = root_n1.rank+1
 
 
-	def isCycle(self):
+	def isCycle(self,A):
 		for i in self.members.values():
 			#print(i)
-			for j in self.members[i.data].adj_list:
+			for j in A.lis[i.data]:
 				if i.parent.data==self.members[j].parent:
 					return True
 
@@ -59,6 +62,7 @@ class Disjoint_sets:
 def main():
 	n=int(input("Enter no of Edges : "))
 	print("Enter the edges(X to stop) :")
+	A=Adjacent_list(n)
 	S=Disjoint_sets()
 	while True:
 		t=input().split()
@@ -66,14 +70,15 @@ def main():
 			break
 		v1=int(t[0])
 		v2=int(t[1])
-		S.make_set(v1,v2)
-		S.make_set(v2,v1)
+		A.add_edges(v1,v2)
+		S.make_set(v1)
+		S.make_set(v2)
 		S.union(S.get(v1),S.get(v2))
 
 	for m in S.members.values():
 		print("Value : %s Parent : %s" %(m.data,m.parent.data))
 
-	c=S.isCycle()
+	c=S.isCycle(A)
 	if c==True:
 		print("Cycle Found")
 	else:
