@@ -9,12 +9,6 @@ def intervalScheduing(d):
 	print(p)
 
 
-
-
-
-
-
-
 def main():
 	n=int(input("enter the total no of intervals : "))
 	d=[]
@@ -30,11 +24,6 @@ def main():
 	d.sort(key=lambda x: x[1],)
 	#print(d)
 	intervalScheduing(d)
-
-
-
-
-
 
 
 if __name__ == '__main__':
