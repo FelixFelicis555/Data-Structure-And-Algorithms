@@ -4,6 +4,7 @@ class Node:
 		self.parent = self
 		self.data = d
 
+
 class Disjoint_sets:
 	def __init__(self):
 		self.members=dict()
