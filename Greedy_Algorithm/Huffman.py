@@ -19,20 +19,21 @@ class Huffman:
 		for leaf in self.leaves:
 			H.Insert(leaf)
 
-		for i in range(1,n-1):
+		for i in range(1,n):
 			x=H.extractMin()
 			y=H.extractMin()
 			node=Node(None,x.freq+y.freq,x,y)
 			H.Insert(node)
 
-		#print(self.Heap)
+		return H.extractMin()
 
-
-
-	def Print_Node(self,n):
-		for i in range(n):
-			print(self.leaves[i].char)
-			print(self.leaves[i].freq)
+	def Print_Node(self,root,s):
+		if root.left==None and root.right ==None:
+			print("Character %s : %s"%(root.char,s))
+			return
+		self.Print_Node(root.left,s+"0")
+		self.Print_Node(root.right,s+"1")
+		
 
 def main():
 	H=Huffman()
@@ -45,9 +46,12 @@ def main():
 		f=int(input())
 		char.append(c)
 		freq.append(f)
-	H.Huffman_encoding(char,freq,n)
-	print("Character with their frequency :")
-	#H.Print_Node(n)
+	root=H.Huffman_encoding(char,freq,n)
+	print("Size of File :")
+	print(root.freq)
+	print("Huffman Codes :")
+	H.Print_Node(root,"")
+	
 
 
 if __name__ == '__main__':
