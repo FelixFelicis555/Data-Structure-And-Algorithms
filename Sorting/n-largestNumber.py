@@ -1,16 +1,15 @@
 '''k largest(or smallest) elements in an array'''
-def Smallest(arr,k):
+def smallest(arr,k):
 	arr.sort()
+	print("%s smallest number are "%(k))
 	for i in range(k):
 		print(arr[i])
 
 def largest(arr,k):
 	arr.sort(reverse=True)
+	print("%s largest numbers are "%(k))
 	for i in range(k):
 		print(arr[i])
-
-
-
 
 
 
