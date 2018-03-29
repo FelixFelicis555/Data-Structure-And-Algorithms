@@ -1,5 +1,3 @@
-import colorama
-
 
 def NaivePatternSearching(txt,pat):
 	lp=len(pat)
@@ -10,17 +8,7 @@ def NaivePatternSearching(txt,pat):
 				break
 		if i==lp-1:
 			print("Pattern found at position %s"%(s))
-			for c in range(lp):
-				txt=colorama.Back.RED + txt[s+c]
-			#print("Pattern found at position %s"%(s))
-	#print("Matched Portion :")
-	#print(txt)
-
-
-
-
-
-
+	
 
 
 def main():
