@@ -37,17 +37,12 @@ def RabinKarp(txt,pat):
 				#if new hash value is less than 0, then it has to be made positive
 				if hash_txt<0:
 					t=t+q
-	return p
-
-def Plag_Test(p,n):
-	Plag_percentage=(p/n)*100
-	print("Plag percentage : %s"%(Plag_percentage))
 
 def main():
 	text=input("Enter the Text :")
 	pattern=input("Enter the pattern to be search :")
-	p=RabinKarp(text,pattern)
-	Plag_Test(p,len(text))
+	RabinKarp(text,pattern)
+	
 
 
 
