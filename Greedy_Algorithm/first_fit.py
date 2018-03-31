@@ -29,11 +29,10 @@ class First_Fit:
 		print("Allocation Table :")
 		print("Process No.\t\tProcess Size\t\tBlock-No.")
 		for i in range(m):
-			self.v=self.a[i]
-			if self.v !=None:
+			if i in self.a.keys():
 				print(i+1,end='    ')
 				print(proc_size[i],end='    ')
-				print(self.v+1)
+				print(self.a[i]+1)
 			else:
 				print(i+1,end='    ')
 				print(proc_size[i],end='    ')
@@ -46,7 +45,7 @@ class First_Fit:
 			print("Block no %s :"%(i+1))
 			print("Size of Block : %s"%(self.sys_memory[i].fixed_size))
 			self.s=self.sys_memory[i].fixed_size-self.sys_memory[i].left_space
-			print("Space Occupied : %s"%(s))
+			print("Space Occupied : %s"%(self.s))
 			print("Space Left : %s"%(self.sys_memory[i].fixed_size))
 
 
