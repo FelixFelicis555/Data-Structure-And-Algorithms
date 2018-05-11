@@ -23,7 +23,7 @@ for (int i=0;i<str.length();i++)
 auto x = max_element(word.begin(),word.end(),[](const pair<int, int>& p1, const pair<int, int>& p2) {
         return p1.second < p2.second; });
 cout<<x->first<<"\t";
-word.erase(x->first);
+//word.erase(x->first);
 x = max_element(word.begin(),word.end(),[](const pair<int, int>& p1, const pair<int, int>& p2) {
         return p1.second < p2.second; });
 cout<<"Second most frequent : "<<x->first<<endl;
