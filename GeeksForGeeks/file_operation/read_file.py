@@ -1,5 +1,0 @@
-file=open(r'J:\To_Do\19-04-18.txt','r')
-content=file.read()
-print("All the Contents :\n")
-print(content)
-file.close()
